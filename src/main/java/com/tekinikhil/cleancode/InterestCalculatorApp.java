@@ -1,6 +1,6 @@
 package com.tekinikhil.cleancode;
 
-public class InterestCalculator 
+public class InterestCalculatorApp 
 {
 	public double findSimpleInterest(double principle,double time,double rateOfInterest)
 	{

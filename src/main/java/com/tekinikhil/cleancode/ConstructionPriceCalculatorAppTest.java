@@ -4,12 +4,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class ConstructionPriceCalculatorTest 
+class ConstructionPriceCalculatorAppTest 
 {
 	@Test
 	void constructionCostStandard()
 	{
-		ConstructionPriceCalculator standardMaterial=new ConstructionPriceCalculator();
+		ConstructionPriceCalculatorApp standardMaterial=new ConstructionPriceCalculatorApp();
 		standardMaterial.takeInputParameters(55,"standard",false);
 		double constructionPrice=standardMaterial.calculateConstructionCost();
 		assertEquals(66000,constructionPrice,1);
@@ -17,7 +17,7 @@ class ConstructionPriceCalculatorTest
 	@Test
 	void constructionCostAboveStandard()
 	{
-		ConstructionPriceCalculator aboveStandardMaterial=new ConstructionPriceCalculator();
+		ConstructionPriceCalculatorApp aboveStandardMaterial=new ConstructionPriceCalculatorApp();
 		aboveStandardMaterial.takeInputParameters(60,"aboveStandard");
 		double constructionPrice=aboveStandardMaterial.calculateConstructionCost();
 		assertEquals(90000,constructionPrice,1);
@@ -25,7 +25,7 @@ class ConstructionPriceCalculatorTest
 	@Test
 	void constructionCostHighStandard()
 	{
-		ConstructionPriceCalculator highStandardMaterial=new ConstructionPriceCalculator();
+		ConstructionPriceCalculatorApp highStandardMaterial=new ConstructionPriceCalculatorApp();
 		highStandardMaterial.takeInputParameters(100,"highStandard",false);
 		double constructionPrice=highStandardMaterial.calculateConstructionCost();
 		assertEquals(180000,constructionPrice,1);
@@ -33,7 +33,7 @@ class ConstructionPriceCalculatorTest
 	@Test
 	void constructionCostHighStandardAutoHome()
 	{
-		ConstructionPriceCalculator highStandardMaterialAuto=new ConstructionPriceCalculator();
+		ConstructionPriceCalculatorApp highStandardMaterialAuto=new ConstructionPriceCalculatorApp();
 		highStandardMaterialAuto.takeInputParameters(400,"highStandard",true);
 		double constructionPrice=highStandardMaterialAuto.calculateConstructionCost();
 		assertEquals(1000000,constructionPrice,1);

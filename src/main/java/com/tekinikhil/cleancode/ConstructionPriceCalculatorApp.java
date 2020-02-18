@@ -1,6 +1,6 @@
 package com.tekinikhil.cleancode;
 
-public class ConstructionPriceCalculator 
+public class ConstructionPriceCalculatorApp 
 {
 	double houseAreaInSqFeet,estimatedConstructionCost;
 	String materialStandard;
